@@ -19,12 +19,6 @@ public interface UlangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitProg(UlangParser.ProgContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link UlangParser#blockStatements}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBlockStatements(UlangParser.BlockStatementsContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link UlangParser#blockStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -91,24 +85,6 @@ public interface UlangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitVariableInitializer(UlangParser.VariableInitializerContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link UlangParser#literal}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitLiteral(UlangParser.LiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link UlangParser#integerLiteral}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitIntegerLiteral(UlangParser.IntegerLiteralContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link UlangParser#floatLiteral}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFloatLiteral(UlangParser.FloatLiteralContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link UlangParser#statement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -169,15 +145,27 @@ public interface UlangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitPrimary(UlangParser.PrimaryContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link UlangParser#literal}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLiteral(UlangParser.LiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link UlangParser#integerLiteral}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitIntegerLiteral(UlangParser.IntegerLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link UlangParser#floatLiteral}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFloatLiteral(UlangParser.FloatLiteralContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link UlangParser#typeType}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitTypeType(UlangParser.TypeTypeContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link UlangParser#primitiveType}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitPrimitiveType(UlangParser.PrimitiveTypeContext ctx);
 }

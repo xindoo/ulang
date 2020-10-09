@@ -137,10 +137,6 @@ public class UlangVisitor extends UlangBaseVisitor<Object> {
         return visitChildren(ctx);
     }
 
-    @Override public Object visitBlockStatements(UlangParser.BlockStatementsContext ctx) {
-        return visitChildren(ctx);
-    }
-
     @Override public Object visitBlockStatement(UlangParser.BlockStatementContext ctx) {
         return visitChildren(ctx);
     }

@@ -20,16 +20,6 @@ public interface UlangListener extends ParseTreeListener {
 	 */
 	void exitProg(UlangParser.ProgContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link UlangParser#blockStatements}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlockStatements(UlangParser.BlockStatementsContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link UlangParser#blockStatements}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlockStatements(UlangParser.BlockStatementsContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link UlangParser#blockStatement}.
 	 * @param ctx the parse tree
 	 */
@@ -140,36 +130,6 @@ public interface UlangListener extends ParseTreeListener {
 	 */
 	void exitVariableInitializer(UlangParser.VariableInitializerContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link UlangParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void enterLiteral(UlangParser.LiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link UlangParser#literal}.
-	 * @param ctx the parse tree
-	 */
-	void exitLiteral(UlangParser.LiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link UlangParser#integerLiteral}.
-	 * @param ctx the parse tree
-	 */
-	void enterIntegerLiteral(UlangParser.IntegerLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link UlangParser#integerLiteral}.
-	 * @param ctx the parse tree
-	 */
-	void exitIntegerLiteral(UlangParser.IntegerLiteralContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link UlangParser#floatLiteral}.
-	 * @param ctx the parse tree
-	 */
-	void enterFloatLiteral(UlangParser.FloatLiteralContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link UlangParser#floatLiteral}.
-	 * @param ctx the parse tree
-	 */
-	void exitFloatLiteral(UlangParser.FloatLiteralContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link UlangParser#statement}.
 	 * @param ctx the parse tree
 	 */
@@ -270,6 +230,36 @@ public interface UlangListener extends ParseTreeListener {
 	 */
 	void exitPrimary(UlangParser.PrimaryContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link UlangParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void enterLiteral(UlangParser.LiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link UlangParser#literal}.
+	 * @param ctx the parse tree
+	 */
+	void exitLiteral(UlangParser.LiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link UlangParser#integerLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void enterIntegerLiteral(UlangParser.IntegerLiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link UlangParser#integerLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void exitIntegerLiteral(UlangParser.IntegerLiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link UlangParser#floatLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void enterFloatLiteral(UlangParser.FloatLiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link UlangParser#floatLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void exitFloatLiteral(UlangParser.FloatLiteralContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link UlangParser#typeType}.
 	 * @param ctx the parse tree
 	 */
@@ -279,14 +269,4 @@ public interface UlangListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitTypeType(UlangParser.TypeTypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link UlangParser#primitiveType}.
-	 * @param ctx the parse tree
-	 */
-	void enterPrimitiveType(UlangParser.PrimitiveTypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link UlangParser#primitiveType}.
-	 * @param ctx the parse tree
-	 */
-	void exitPrimitiveType(UlangParser.PrimitiveTypeContext ctx);
 }

@@ -7,17 +7,14 @@ package xyz.xindoo.ulang.g4;
 }
 
 prog
-    : blockStatements
-    ;
-
-blockStatements
-    : blockStatement*
+    : blockStatement
     ;
 
 blockStatement
     : variableDeclarators ';'
-    | statement
+    | statement*
     | functionDef
+    | '{' blockStatement '}'
     ;
 
 
@@ -27,7 +24,7 @@ functionDef
     ;
 
 functionBody
-    : '{' blockStatements '}'
+    : '{' blockStatement* '}'
     | ';'
     ;
 
