@@ -31,12 +31,6 @@ public interface UlangVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFunctionDef(UlangParser.FunctionDefContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link UlangParser#functionBody}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitFunctionBody(UlangParser.FunctionBodyContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link UlangParser#formalParameters}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

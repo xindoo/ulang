@@ -54,18 +54,6 @@ public class UlangBaseListener implements UlangListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterFunctionBody(UlangParser.FunctionBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitFunctionBody(UlangParser.FunctionBodyContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterFormalParameters(UlangParser.FormalParametersContext ctx) { }
 	/**
 	 * {@inheritDoc}

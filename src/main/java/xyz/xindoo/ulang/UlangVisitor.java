@@ -131,13 +131,8 @@ public class UlangVisitor extends UlangBaseVisitor<Object> {
         return rtn;
     }
 
-    @Override
-    public Object visitFunctionBody(UlangParser.FunctionBodyContext ctx) {
-        String text = ctx.getText();
-        return visitChildren(ctx);
-    }
-
-    @Override public Object visitBlockStatement(UlangParser.BlockStatementContext ctx) {
+    @Override 
+    public Object visitBlockStatement(UlangParser.BlockStatementContext ctx) {
         return visitChildren(ctx);
     }
 

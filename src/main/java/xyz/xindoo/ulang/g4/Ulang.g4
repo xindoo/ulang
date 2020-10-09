@@ -13,19 +13,11 @@ prog
 blockStatement
     : variableDeclarators ';'
     | statement*
-    | functionDef
-    | '{' blockStatement '}'
     ;
 
 
 functionDef
-    : FUNCTION IDENTIFIER formalParameters
-      functionBody
-    ;
-
-functionBody
-    : '{' blockStatement* '}'
-    | ';'
+    : FUNCTION IDENTIFIER formalParameters '{' blockStatement '}'
     ;
 
 formalParameters
@@ -61,23 +53,24 @@ variableInitializer
     ;
 
 statement
-    : IF parExpression statement (ELSE statement)?
-    | FOR '(' forControl ')' statement
-    | WHILE parExpression statement
-    | DO statement WHILE parExpression ';'
+    : IF parExpression '{' blockStatement '}' (ELSE '{' blockStatement '}')?
+    | FOR forControl '{' blockStatement '}'
+    | WHILE parExpression '{' blockStatement '}'
+    | DO '{' blockStatement '}' WHILE parExpression ';'
     | RETURN expression? ';'
     | BREAK IDENTIFIER? ';'
     | CONTINUE IDENTIFIER? ';'
     | SEMI
+    | functionDef
     | assignment ';'
     ;
 
 assignment
-	: IDENTIFIER aop=('='|'+='|'-=') expression
-	;
+    : IDENTIFIER aop=('='|'+='|'-=') expression
+    ;
 
 forControl
-    : forInit? ';' expression? ';' forUpdate=expressionList?
+    : '(' forInit? ';' expression? ';' forUpdate=expressionList? ')'
     ;
 
 forInit
@@ -136,6 +129,7 @@ floatLiteral
 typeType
     : 'var'
     ;
+
 
 
 

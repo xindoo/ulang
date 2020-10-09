@@ -40,16 +40,6 @@ public interface UlangListener extends ParseTreeListener {
 	 */
 	void exitFunctionDef(UlangParser.FunctionDefContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link UlangParser#functionBody}.
-	 * @param ctx the parse tree
-	 */
-	void enterFunctionBody(UlangParser.FunctionBodyContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link UlangParser#functionBody}.
-	 * @param ctx the parse tree
-	 */
-	void exitFunctionBody(UlangParser.FunctionBodyContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link UlangParser#formalParameters}.
 	 * @param ctx the parse tree
 	 */
