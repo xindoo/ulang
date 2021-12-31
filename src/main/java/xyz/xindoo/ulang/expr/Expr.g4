@@ -15,10 +15,10 @@ primary
     | number
     ;
 number
-    : Digits
-    | Digits '.' Digits
+    : Digits               // 整数
+    | Digits '.' Digits    // 浮点数
     ;
 
 Digits
-    : [0-9] ([0-9_]* [0-9])?
+    : [0-9] ([0-9]*)?
     ;
