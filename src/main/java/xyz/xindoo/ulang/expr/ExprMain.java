@@ -20,7 +20,7 @@ public class ExprMain {
             ExprParser.ExpressionContext expressionContext = parser.expression();
             MyExprVisitor visitor = new MyExprVisitor();
             Double res = visitor.visitExpression(expressionContext);
-            System.out.println(">" + res);
+            System.out.println("=" + res);
         }
     }
 }
